@@ -8,3 +8,34 @@ First, we need a base application that will generate logs. We will use a slightl
 
 This modified version extends the original one by adding a few HTTP endpoints that will spawn some logging for us to use with ELK.
 
+To start the application, go into the recently cloned repo:
+
+`cd gs-serving-web-content`{{execute}}
+
+and use the Maven wrapper (`mvnw`) to trigger the installation of dependencies and start the application:
+
+`./mvnw spring-boot:run`{{execute}}
+
+This will take roughly 15 seconds the first time, since the Maven dependencies will be pulled from a central repository (these dependencies will be cached locally to make subsequent runs faster).
+
+</br>
+
+><center>
+><b>Aside: Maven wrapper</b></br></br>
+></center>
+> Some text about what the Maven wrapper is, to make command less mysterious. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+<br/>Regular text.
+
+<details>
+<summary>Aside</summary>
+
+><center>
+><b>Aside: Maven wrapper</b></br></br>
+></center>
+> Another test to see which looks best on Katacoda. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+</details>
+
+<br/>
+More text.
