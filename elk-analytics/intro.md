@@ -1,4 +1,4 @@
-In this tutorial, we will look at how to use the **ELK stack** (also called **Elastic Stack**) to provide monitoring/analytics for software applications.
+In this tutorial, we will look at how to use the [**ELK stack**](https://www.elastic.co/what-is/elk-stack) (also called **Elastic Stack**) to provide monitoring/analytics for software applications.
 
 The ELK stack is an acronym for three open-source projects:
 * **Elasticsearch**, an index-based search and analytics engine
