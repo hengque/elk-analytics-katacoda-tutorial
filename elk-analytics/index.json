@@ -36,6 +36,7 @@
   },
   "environment": {
     "uilayout": "editor-terminal",
+    "hideHiddenFiles": true,
     "showdashboard": true,
     "dashboards": [
       {"name": "Base application", "port": 8080}
