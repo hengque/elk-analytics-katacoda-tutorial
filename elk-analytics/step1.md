@@ -24,10 +24,9 @@ This will take roughly 15 seconds the first time, since the Maven dependencies w
 
 <blockquote style="background-color: aliceblue">
 Another test to see which looks best on Katacoda. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-<blockquote>
+</blockquote>
 
 <hr>
 </details>
 
-<br/>
 More text.
