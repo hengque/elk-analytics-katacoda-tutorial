@@ -34,7 +34,10 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "editor-terminal",
+    "dashboards": [
+      {"name": "Base app (port)", "port": 8080},
+      {"name": "Base app (href)", "href": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com"}]
   },
   "backend": {
     "imageid": "ubuntu:2004"
