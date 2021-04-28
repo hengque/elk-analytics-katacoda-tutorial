@@ -4,6 +4,7 @@ First, we need a base application that will generate logs. We will use a slightl
 
 `git clone https://github.com/andreaskth/gs-serving-web-content.git`{{execute}}
 
-This modified version extends the original one by adding a few endpoints that will spawn some logging for us to use with ELK.
+*(Tip: You can click the code box to automatically enter the command in the Katacoda terminal!)*
 
+This modified version extends the original one by adding a few HTTP endpoints that will spawn some logging for us to use with ELK.
 
