@@ -28,7 +28,8 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "background": "scenario_start.sh"
     },
     "finish": {
       "text": "finish.md"
