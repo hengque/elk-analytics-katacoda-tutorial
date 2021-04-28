@@ -18,7 +18,7 @@ and use the Maven wrapper (`mvnw`) to trigger the installation of dependencies a
 
 This will take roughly 15 seconds the first time, since the Maven dependencies will be pulled from a central repository (these dependencies will be cached locally to make subsequent runs faster).
 
-<details>
+<details markdown="1">
 <summary>Details of command</summary>
 
 ---
