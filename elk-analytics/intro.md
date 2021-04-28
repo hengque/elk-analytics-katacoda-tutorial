@@ -2,7 +2,7 @@ In this tutorial, we will look at how to use the [**ELK stack**](https://www.ela
 
 The ELK stack is an acronym for three open-source projects:
 * **Elasticsearch**, an index-based search and analytics engine
-* **Logstash**, a tool that can take in data from many different sources, perform transformations on the data, and output it to several different destinations
+* **Logstash**, a data processing pipeline that can take in data from many different sources, perform transformations on the data, and output it to several different destinations
 * **Kibana**, a graphical user interface which allows the creation of many different data visualizations based on data from Elasticsearch
 
 As the tutorial progresses, we will have more to say about each of these tools.
