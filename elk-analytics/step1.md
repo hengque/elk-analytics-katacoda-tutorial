@@ -25,18 +25,9 @@ This will take roughly 15 seconds the first time, since the Maven dependencies w
 <b>What did that command just do?</b></br></br>
 </center>
 
+```
 Another test to see which looks best on Katacoda. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
 ```
-Test box
-```
-
-```html
-<body>
-<p>How about this?</p>
-</body>
-```
-
 <hr>
 
 </details>
