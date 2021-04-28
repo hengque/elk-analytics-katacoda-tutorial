@@ -18,23 +18,26 @@ and use the Maven wrapper (`mvnw`) to trigger the installation of dependencies a
 
 This will take roughly 15 seconds the first time, since the Maven dependencies will be pulled from a central repository (these dependencies will be cached locally to make subsequent runs faster).
 
-</br>
-
-><center>
-><b>Aside: Maven wrapper</b></br></br>
-></center>
-> Some text about what the Maven wrapper is, to make command less mysterious. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-<br/>Regular text.
-
 <details>
-<summary>Aside</summary>
+<summary>Details of command</summary>
 
-><center>
-><b>Aside: Maven wrapper</b></br></br>
-></center>
-> Another test to see which looks best on Katacoda. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+---
+<center>
+<b>What did that command just do?</b></br></br>
+</center>
+Another test to see which looks best on Katacoda. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
+```
+Does this work?
+```
+
+```html
+<body>
+<p>How about this?</p>
+</body>
+```
+
+---
 </details>
 
 <br/>
