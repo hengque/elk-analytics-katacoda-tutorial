@@ -3,7 +3,7 @@
   "description": "Learn how to use the ELK stack for application monitoring/analytics.",
   "difficulty": "Beginner",
   "time": "15 minutes",
-  "icon": "heartbeat",
+  "icon": "fa-heartbeat",
   "details": {
     "steps": [
       {
