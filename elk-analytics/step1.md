@@ -35,4 +35,8 @@ In the command above, we use the Maven wrapper to start the Spring Boot applicat
 
 This will take roughly 15 seconds the first time, since the Maven dependencies will be pulled from a central repository (these dependencies will be cached locally to make subsequent runs faster).
 
-More text.
+You will know the application has started when the terminal starts showing Spring log-messages (containing things like timestamps and green-colored `INFO` log levels).
+
+The application is available at port 8080 of our host. To view it, click the `Base application` terminal tab.
+
+TODO: Skriv något om error-meddelandet som dyker upp för att Katacoda kör https och bas-applikationen kör http.
