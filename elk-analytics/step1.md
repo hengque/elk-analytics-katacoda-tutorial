@@ -16,17 +16,20 @@ and use the Maven wrapper (`mvnw`) to trigger the installation of dependencies a
 
 `./mvnw spring-boot:run`{{execute}}
 
-This will take roughly 15 seconds the first time, since the Maven dependencies will be pulled from a central repository (these dependencies will be cached locally to make subsequent runs faster).
-
-<details markdown="1">
+<details>
 <summary>Details of command</summary>
-<hr>
 
-<blockquote style="background-color: aliceblue">
-Another test to see which looks best on Katacoda. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-</blockquote>
+<div style="display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 30px;
+  margin-right: 30px;
+  background-color: aliceblue;">
+The mvnw script in the command above is known as a Maven wrapper. <b>Bold text</b> and <code>code text</code>
+</div>
 
-<hr>
 </details>
+
+This will take roughly 15 seconds the first time, since the Maven dependencies will be pulled from a central repository (these dependencies will be cached locally to make subsequent runs faster).
 
 More text.
