@@ -20,12 +20,14 @@ and use the Maven wrapper (`mvnw`) to trigger the installation of dependencies a
 <summary>Details of command</summary>
 
 <div style="display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
   background-color: aliceblue;">
-The mvnw script in the command above is known as a Maven wrapper. <b>Bold text</b> and <code>code text</code>
+The <code>mvnw</code> script in the command above is known as a Maven wrapper. Maven is a widely used build tool for Java (Gradle and Ant are popular alternatives), and the Maven wrapper is a script that can be used to avoid having to install Maven before using it.</br>
+(You can read more about it <a href="https://www.baeldung.com/maven-wrapper">here</a> and <a href="https://stackoverflow.com/questions/38723833/what-is-the-purpose-of-mvnw-and-mvnw-cmd-files">here</a>).</br>
+</br>
+In the command above, we use the Maven wrapper to start the Spring Boot application by passing the <code>run</code> goal to it.
+
 </div>
 
 </details>
