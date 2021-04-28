@@ -21,15 +21,12 @@ This will take roughly 15 seconds the first time, since the Maven dependencies w
 <details markdown="1">
 <summary>Details of command</summary>
 <hr>
-<center>
-<b>What did that command just do?</b></br></br>
-</center>
 
-```
+<blockquote style="background-color: aliceblue">
 Another test to see which looks best on Katacoda. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-```
-<hr>
+<blockquote>
 
+<hr>
 </details>
 
 <br/>
