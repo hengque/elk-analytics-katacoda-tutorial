@@ -28,7 +28,8 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "credits": "Test credits"
     },
     "finish": {
       "text": "finish.md"
