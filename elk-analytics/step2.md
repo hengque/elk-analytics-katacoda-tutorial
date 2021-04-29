@@ -27,7 +27,13 @@ The <code>application.properties</code> file can be used to specify various appl
 
 This will make sure our logs will end up in a file in the `/root/logs` folder (the file will be automatically named `spring.log`).
 
+<div style="display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #cbcbcb;
+  padding: 1em;">
 In this part of the tutorial, you are encouraged to research how to implement "logging to file" in your preferred language/framework, in case you want to use this tutorial with an application not written using Java Spring. Apart from specific grok-patterns for parsing our log-messages (Step 6 will explain what this means), the rest of the tutorial will be useful regardless of how the base application is implemented.
+</div>
 
 Now, as previously stated, this tutorial is not about Java logging. Because of this, we have already added logging statements to the base application you cloned in the last step. However, to not make that part too "magical", let's quickly see how this is done by adding some logging statements in the `/greeting`-endpoint.
 
