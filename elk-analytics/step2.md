@@ -1,3 +1,5 @@
+<p></p>
+
 ## Persisting our log messages
 
 Se till att applikationen är avstängd.

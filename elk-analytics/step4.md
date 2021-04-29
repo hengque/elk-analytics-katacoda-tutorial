@@ -1,7 +1,4 @@
-
-
-
-
+<p></p>
 
 ## Configuring the ELK stack
 

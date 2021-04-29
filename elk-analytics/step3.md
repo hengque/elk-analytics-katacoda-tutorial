@@ -1,3 +1,5 @@
+<p></p>
+
 ## Introducing: The ELK stack
 
 "First of all, it will take some time to fetch and build the images needed to get the stack up and running. Therefore, it's suggested that you clone the stack and invoke docker-compose right now, and then read the information about ELK as the stack is setting up:"
