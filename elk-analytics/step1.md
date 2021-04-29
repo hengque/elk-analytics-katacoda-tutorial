@@ -8,7 +8,7 @@ First, we need a base application that will generate logs. We will use a slightl
 
 *(Tip: You can click the code box to automatically enter the command in the Katacoda terminal!)*
 
-This modified version extends the original one by adding a few HTTP endpoints that will spawn some logging for us to use with ELK.
+This modified version extends the original one by adding a few HTTP endpoints (i.e. URL paths) that will spawn some logging for us to use with ELK.
 
 To start the application, go into the recently cloned repo:
 
@@ -41,15 +41,13 @@ You will know the application has started when the terminal starts showing Sprin
 
 The application is available at port 8080 of our host. To view it, click the `Base application` terminal tab.
 
-Nämn error-meddelandet som dyker upp för att Katacoda kör https och bas-applikationen kör http. Och påpeka att detta är ett exempel på hur logg-meddelanden inte alltid ser likadana ut (återkoppla till det när vi kör logstash-delen).
+As you might have noticed, a Java error-message has appeared in the terminal. This is because Katacoda automatically uses HTTPS to browse URL:s, while our basic Spring application only uses HTTP ([link](https://stackoverflow.com/a/42319270)). Therefore, it's nothing to worry about. It also serves as a good reminder for the rest of the tutorial that **we can never assume that all log messages will follow the same format.**
 
-Skriv något om vilka endpoints som finns tillgängliga:
-* /generate-errors för att generera error-meddelanden
-* /greeting för att få en hälsning
-* /calculator för att få en miniräknare
+These are some endpoints available in our base application:
+* `/generate-errors` - generate 10 log messages with a log-level of `ERROR` (you can change the count by appending `/generate-errors?count=100` as a query-string)
+* `/greeting` - display a 'Hello World!'-greeting page (greet someone else by appending `/greeting?name=Katacoda` as a query-string)
+* `/calculator` - TODO Henrik
 
-Be användaren gå in på /generate-errors för att generera 10 error-meddelanden. Gör användaren uppmärksam på att av någon anledning är det två mellanrum mellan 'timestamp' och 'log level' när den är INFO, men bara ett när den är ERROR (detta blir också relevant i grok-patterns i logstash-delen).
+If you haven't already, have a go at invoking the different endpoints and look at the log-messages that appear in the Katacoda-terminal. The `/greeting`-endpoint does not yet generate logging (we'll see why in the next step). Notice that, for some reason, there are two spaces between the timestamp and the log-level when the log-level is `INFO`, and only one space when it is `ERROR`. We will have to take this quirk into account when parsing our logs.
 
-(Påpeka att man kan stänga av applikationer med Ctrl+C, och att detta gäller för ELK senare också)
-
-Sen en övergångsmening om att vi ska 'persist':a loggarna i nästa steg.
+Next, we will see how to make our logs persist in a log file at our chosen location. Shut down the running application (`Ctrl+C`) and proceed to the next step.
