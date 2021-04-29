@@ -1,4 +1,8 @@
 
+
+
+
+
 ## Configuring the ELK stack
 
 Koppla tillbaka till logstash som hämtar data från flera ställen via logstash.conf. Be användaren öppna filen. Visa att från docker-elk har vi redan två input-ställen (förklara dem kort, gör Beats-återkoppling). Säg att vi vill även ha från vår fil. Lägg till (gör ev. om rutan senare till en som automatiskt kopierar till clipboard; men kanske inte dock för jag kan tycka att sådana är lite störiga ibland):
