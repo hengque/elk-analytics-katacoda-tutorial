@@ -1,5 +1,7 @@
 In this tutorial, we will look at how to use the [**ELK stack**](https://www.elastic.co/what-is/elk-stack) (also called **Elastic Stack**) to provide monitoring/analytics for software applications.
 
+<!-- Kanske inte bör säga att den också kallas Elastic stack. Förvisso stämmer det, men egentligen bör man ju kalla ELK för ELK och Elastic stack är snarare ELKB eller så. -->
+
 The ELK stack is an acronym for three open-source projects:
 * **Elasticsearch**, an index-based search and analytics engine
 * **Logstash**, a data processing pipeline that can take in data from many different sources, perform transformations on the data, and output it to several different destinations
