@@ -37,7 +37,7 @@ In this part of the tutorial, you are encouraged to research how to implement "l
 
 Now, as previously stated, this tutorial is not about Java logging. Because of this, we have already added logging statements to the base application you cloned in the last step. However, to not make that part too "magical", let's quickly see how this is done by adding some logging statements in the `/greeting`-endpoint.
 
-You can find all endpoints in the `src/main/java/com/example/servingwebcontent` folder. Open the `GreetingController.java` file, and change it by adding the following imports:
+You can find all endpoints in the `src/main/java/com/example/servingwebcontent` folder (TODO: gör det lättare att hitta dit, helst om man får open att funka). Open the `GreetingController.java` file, and change it by adding the following imports:
 
 ```
 import org.slf4j.Logger;
@@ -56,7 +56,7 @@ and add a statement in the `greeting`-method (before the return statement) to pr
 logger.info("Greeted: " + name);
 ```
 
-(If you are unsure if you got it right, have a look at how it is done in the `/generate-errors`-endpoint. You can find it in the `ErrorController.java` file, in the same folder as the Greeting controller.)
+(If you are unsure you got it right, have a look at how logging was implemented in the `/generate-errors`-endpoint. You can find it in the `ErrorController.java` file, in the same folder as the Greeting controller.)
 
 Now, with the newly added logging in the `/greeting`-endpoint, and especially our newly added log-folder, let's again start the base application and make sure everything is working. Still in the `gs-serving-web-content` folder, start the base application:
 
@@ -66,6 +66,6 @@ When it has started, you should be able to see the new log messages we added to 
 
 Open a new terminal tab at this location and invoke `cat spring.log` to make sure the log file is being updated with your log messages.
 
-(TODO: Kanske ha en predefined tab här, eller på ngt sätt göra detta steg lite "snällare" (något execute-kommando eller så). Kanske inte ens ber dem gå till den tabben utan istället bara säger åt dem att köra `cat /root/logs/spring.log`?).
+(TODO: Kanske ha en predefined tab här, eller på ngt sätt göra detta steg lite "snällare" (något execute-kommando eller så). Kanske inte ens ber dem gå till rätt mapp i den nya tabben utan istället bara säger åt dem att köra `cat /root/logs/spring.log` i nya tabben? Tror man t om kan ha en predefined tabb som dyker upp i ett visst steg, och som kör ett visst kommando när den öppnas. Det vore ju perfekt här).
 
 Now, it is high time to download and start using the ELK stack!

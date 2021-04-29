@@ -41,7 +41,7 @@ You will know the application has started when the terminal starts showing Sprin
 
 The application is available at port 8080 of our host. To view it, click the `Base application` terminal tab.
 
-As you might have noticed, a Java error-message has appeared in the terminal. This is because Katacoda automatically uses HTTPS to browse URL:s, while our basic Spring application only uses HTTP ([link](https://stackoverflow.com/a/42319270)). Therefore, it's nothing to worry about. It also serves as a good reminder for the rest of the tutorial that **we can never assume that all log messages will follow the same format.**
+As you might have noticed, a Java error-message has appeared in the terminal. This is because Katacoda automatically uses HTTPS to browse URLs, while our basic Spring application only uses HTTP ([link](https://stackoverflow.com/a/42319270)). Therefore, it's nothing to worry about. It also serves as a good reminder for the rest of the tutorial that **we can never assume that all log messages will follow the same format.**
 
 These are some endpoints available in our base application:
 * `/generate-errors` - generate 10 log messages with a log-level of `ERROR` (you can change the count by appending `/generate-errors?count=100` as a query-string)
