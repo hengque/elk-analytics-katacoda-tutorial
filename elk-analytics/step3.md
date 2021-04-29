@@ -2,7 +2,7 @@
 
 ## Introducing: The ELK stack
 
-It will take some time to fetch and build the containers (containers are briefly explained below) needed to get the ELK stack up and running. Therefore, the next commands will clone the stack and invoke `docker-compose` (also explained below) to let it set up while you read the information about ELK as the stack is setting up.
+It will take some time to fetch and build the containers (containers are briefly explained below) needed to get the ELK stack up and running. Therefore, the next commands will clone the stack and invoke `docker-compose` (also explained below) to let it set up while you read the information about ELK as the stack is initializing.
 
 First, make sure you go back to the `/root`-folder. This is done because the tutorial assumes both `gs-serving-web-content` and `docker-elk` are in the `/root` folder.
 
@@ -28,7 +28,7 @@ A <i>container</i> consists of an application and everything that application ne
 </br>
 In this tutorial, we are using <code>docker-compose</code> (pre-installed in our Katacoda environment) to start three containers; one containing Elasticsearch, one containing Logstash, and one containing Kibana. The <code>--no-start</code>-flag passed to <code>docker-compose</code> is used to make it build the containers without starting them (we will want to make some configurations before we start).</br>
 </br>
-You can read more about <code>docker-compose<code> <a href="https://docs.docker.com/compose/reference/">here</a> (and specifically about <code>docker-compose up</code> <a href="https://docs.docker.com/compose/reference/up/">here</a>).
+You can read more about <code>docker-compose</code> <a href="https://docs.docker.com/compose/reference/">here</a> (and specifically about <code>docker-compose up</code> <a href="https://docs.docker.com/compose/reference/up/">here</a>).
 
 </div>
 
