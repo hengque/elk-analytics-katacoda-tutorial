@@ -43,7 +43,9 @@
     "hideHiddenFiles": true,
     "showdashboard": true,
     "dashboards": [
-      {"name": "Base application", "port": 8080}
+      {"name": "Base application", "port": 8080},
+      {"name": "Elastic search", "port": 9200},
+      {"name": "Kibana", "port": 5601}
     ]
   },
   "backend": {

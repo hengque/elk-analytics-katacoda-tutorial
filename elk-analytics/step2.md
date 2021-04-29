@@ -8,7 +8,7 @@ To make the logs persist in a log file, we need to specify this in the settings 
 
 Make sure you are still in the `gs-serving-web-content` folder, and execute:
 
-`echo "logging.file.path=/root/logs" > src/main/resources/application.properties`{{execute}}
+`echo "logging.file.path=/root/logs" > src/main/resources/application.properties`{{execute interrupt}}
 
 <details>
 <summary>Details of application.properties</summary>
@@ -41,7 +41,7 @@ Now, with our newly added log-folder, let's again start the base application and
 
 `./mvnw spring-boot:run`{{execute}}
 
-When it has started, you should be able to see the log messages appear in the `/root/logs/spring.log` file as well. Open a new terminal tab at this location and invoke `cat /root/logs/spring.log` to make sure the log file is being updated with your log messages.
+When it has started, you should be able to see the log messages appear in the `/root/logs/spring.log` file as well. Click the following command to invoke it in a new terminal `cat /root/logs/spring.log`{{execute T2}}, so that you can make sure the log file is being updated with your log messages.
 
 <!--
 (TODO: Kanske ha en predefined tab här, eller på ngt sätt göra detta steg lite "snällare" (något execute-kommando eller så). Kanske inte ens ber dem gå till rätt mapp i den nya tabben utan istället bara säger åt dem att köra `cat /root/logs/spring.log` i nya tabben? Tror man t om kan ha en predefined tabb som dyker upp i ett visst steg, och som kör ett visst kommando när den öppnas. Det vore ju perfekt här).
