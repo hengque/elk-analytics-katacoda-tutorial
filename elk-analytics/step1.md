@@ -46,8 +46,8 @@ As you might have noticed, a Java error-message has appeared in the terminal. Th
 These are some endpoints available in our base application:
 * `/generate-errors` - generate 10 log messages with a log-level of `ERROR` (you can change the count by appending `/generate-errors?count=100` as a query-string)
 * `/greeting` - display a 'Hello World!'-greeting page (greet someone else by appending `/greeting?name=Katacoda` as a query-string)
-* `/calculator` - TODO Henrik
+* `/calculator` - a simple calculator that lets the user enter numbers and basic operators through a button interface. If the equals button is pressed it does some error checking on the input expression and attempts to calculate the result. 
 
 If you haven't already, have a go at invoking the different endpoints and look at the log-messages that appear in the Katacoda-terminal. Notice that, for some reason, there are two spaces between the timestamp and the log-level when the log-level is `INFO`, and only one space when it is `ERROR`. We will have to take this quirk into account when parsing our logs.
 
-Next, we will see how to make our logs persist in a log file at our chosen location. Shut down the running application (`Ctrl+C`) and proceed to the next step.
+Next, we will see how to make our logs persist in a log file at our chosen location. Shut down the running application (<kbd>Ctrl</kbd>+<kbd>C</kbd>, or click here: `^C`{{execute ctrl-seq}}) and proceed to the next step.

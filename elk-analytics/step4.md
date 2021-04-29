@@ -7,9 +7,7 @@ We have learned that Logstash is a data-processing pipline that:
 * performs transformations on/parses this data
 * outputs the result to several different destinations
 
-This three-step process is handled in the `logstash.conf` file in the `docker-elk/logstash/pipeline` folder. Navigate to this file and open it in the editor. TODO: Gör detta lättare.
-
-Testar open:
+This three-step process is handled in the `logstash.conf` file in the `docker-elk/logstash/pipeline` folder. Navigate to this file and open it in the editor, or click this link to automatically open it in the editor:
 `docker-elk/logstash/pipeline/logstash.conf`{{open}}
 
 Each of the three steps are handled by so-called *plugins*. The first step uses *input plugins*, the second uses *filter plugins*, and the third uses *output plugins*.
@@ -39,17 +37,18 @@ In the input step, we also want to tell Logstash to pull data from our log file.
 file {
 	path => "/usr/share/logstash/logfile.log"
 }
-```
+```{{copy}}
+*(Tip: You can click the box to copy the content!)*
 
 Since our ELK stack is running in containers, we need to map the "outside" of the containers to the "inside". This is done in the configuration file for `docker-compose`, called `docker-compose.yml`.
 
-Open `docker-elk/docker-compose.yml` and add the following under the `volumes` attribute in the `logstash`-part of the file (i.e. after line 42):
+Open `docker-elk/docker-compose.yml`{{open}} and add the following under the `volumes` attribute in the `logstash`-part of the file (i.e. after line 42):
 
 ```
 - type: bind
     source: /root/logs/spring.log
     target: /usr/share/logstash/logfile.log
-```
+```{{copy}}
 
 Now we are finally ready to start the stack. Make sure you are in the `docker-elk` in the terminal, and execute:
 
