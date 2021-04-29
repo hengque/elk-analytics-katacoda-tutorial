@@ -10,7 +10,7 @@ We have learned that Logstash is a data-processing pipline that:
 This three-step process is handled in the `logstash.conf` file in the `docker-elk/logstash/pipeline` folder. Navigate to this file and open it in the editor. TODO: Gör detta lättare.
 
 Testar open:
-`/root/docker-elk/logstash/pipeline/logstash.conf`{{open}}
+`docker-elk/logstash/pipeline/logstash.conf`{{open}}
 
 Each of the three steps are handled by so-called *plugins*. The first step uses *input plugins*, the second uses *filter plugins*, and the third uses *output plugins*.
 
