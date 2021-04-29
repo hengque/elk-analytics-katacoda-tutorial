@@ -46,6 +46,26 @@ Går in i Kibana igen och ser att nya 'fields' dykt upp (log-level).
 
 Gå in i Dashboard och skapa en donut-chart baserat på log-level.
 
-Testar att lägga in en bild:
+Såhär ser det ut när den är skapad:
 
-![Test-bild-hej](./assets/test.png)
+![Errors-before](./assets/errors-before.png)
+
+Och sen anropar vi `/generate-errors`-endpointen:
+
+![Errors-generated](./assets/errors-generated.png)
+
+Och klickar sedan på Refresh i dashboarden för att se:
+
+![Errors-after](./assets/errors-after.png)
+
+Lägg in detta för att extrahera vem som hälsas på:
+
+```
+grok {
+    match => [ "logmessage",
+               "Greeted: %{WORD:greeted}"
+             ]
+  }
+```
+
+kan ev. skapa lista sen över vilka som hälsas mest på (och hur många ggr)
