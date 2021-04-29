@@ -39,4 +39,15 @@ You will know the application has started when the terminal starts showing Sprin
 
 The application is available at port 8080 of our host. To view it, click the `Base application` terminal tab.
 
-TODO: Skriv något om error-meddelandet som dyker upp för att Katacoda kör https och bas-applikationen kör http.
+Nämn error-meddelandet som dyker upp för att Katacoda kör https och bas-applikationen kör http. Och påpeka att detta är ett exempel på hur logg-meddelanden inte alltid ser likadana ut (återkoppla till det när vi kör logstash-delen).
+
+Skriv något om vilka endpoints som finns tillgängliga:
+* /generate-errors för att generera error-meddelanden
+* /greeting för att få en hälsning
+* /calculator för att få en miniräknare
+
+Be användaren gå in på /generate-errors för att generera 10 error-meddelanden. Gör användaren uppmärksam på att av någon anledning är det två mellanrum mellan 'timestamp' och 'log level' när den är INFO, men bara ett när den är ERROR (detta blir också relevant i grok-patterns i logstash-delen).
+
+(Påpeka att man kan stänga av applikationer med Ctrl+C, och att detta gäller för ELK senare också)
+
+Sen en övergångsmening om att vi ska 'persist':a loggarna i nästa steg.
