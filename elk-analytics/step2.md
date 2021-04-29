@@ -35,37 +35,16 @@ This will make sure our logs will end up in a file in the `/root/logs` folder (t
 In this part of the tutorial, you are encouraged to research how to implement "logging to file" in your preferred language/framework, in case you want to use this tutorial with an application not written using Java Spring. Apart from specific grok-patterns for parsing our log-messages (Step 6 will explain what this means), the rest of the tutorial will be useful regardless of how the base application is implemented.
 </div>
 
-Now, as previously stated, this tutorial is not about Java logging. Because of this, we have already added logging statements to the base application you cloned in the last step. However, to not make that part too "magical", let's quickly see how this is done by adding some logging statements in the `/greeting`-endpoint.
+As previously stated, this tutorial is not about Java logging. Because of this, we have already added logging statements to the base application you cloned in the last step. If you are interested in how this works, take a look at any of the classes for the endpoints (you can find all endpoints in the `src/main/java/com/example/servingwebcontent` folder).
 
-You can find all endpoints in the `src/main/java/com/example/servingwebcontent` folder (TODO: gör det lättare att hitta dit, helst om man får open att funka). Open the `GreetingController.java` file, and change it by adding the following imports:
-
-```
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-```
-
-and create a `Logger` as a field in the class:
-
-```
-private static final Logger logger = LoggerFactory.getLogger(GreetingController.class);
-```
-
-and add a statement in the `greeting`-method (before the return statement) to produce a log statement with log-level `INFO` when someone is greeted:
-
-```
-logger.info("Greeted: " + name);
-```
-
-(If you are unsure you got it right, have a look at how logging was implemented in the `/generate-errors`-endpoint. You can find it in the `ErrorController.java` file, in the same folder as the Greeting controller.)
-
-Now, with the newly added logging in the `/greeting`-endpoint, and especially our newly added log-folder, let's again start the base application and make sure everything is working. Still in the `gs-serving-web-content` folder, start the base application:
+Now, with our newly added log-folder, let's again start the base application and make sure everything is working. Still in the `gs-serving-web-content` folder, start the base application:
 
 `./mvnw spring-boot:run`{{execute}}
 
-When it has started, you should be able to see the new log messages we added to the `/greeting`-endpoint. More importantly, though, these messages should also appear in the `/root/logs/spring.log` file.
+When it has started, you should be able to see the log messages appear in the `/root/logs/spring.log` file as well. Open a new terminal tab at this location and invoke `cat /root/logs/spring.log` to make sure the log file is being updated with your log messages.
 
-Open a new terminal tab at this location and invoke `cat spring.log` to make sure the log file is being updated with your log messages.
-
+<!--
 (TODO: Kanske ha en predefined tab här, eller på ngt sätt göra detta steg lite "snällare" (något execute-kommando eller så). Kanske inte ens ber dem gå till rätt mapp i den nya tabben utan istället bara säger åt dem att köra `cat /root/logs/spring.log` i nya tabben? Tror man t om kan ha en predefined tabb som dyker upp i ett visst steg, och som kör ett visst kommando när den öppnas. Det vore ju perfekt här).
+-->
 
 Now, it is high time to download and start using the ELK stack!

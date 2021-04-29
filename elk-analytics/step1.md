@@ -48,6 +48,6 @@ These are some endpoints available in our base application:
 * `/greeting` - display a 'Hello World!'-greeting page (greet someone else by appending `/greeting?name=Katacoda` as a query-string)
 * `/calculator` - TODO Henrik
 
-If you haven't already, have a go at invoking the different endpoints and look at the log-messages that appear in the Katacoda-terminal. The `/greeting`-endpoint does not yet generate logging (we'll see why in the next step). Notice that, for some reason, there are two spaces between the timestamp and the log-level when the log-level is `INFO`, and only one space when it is `ERROR`. We will have to take this quirk into account when parsing our logs.
+If you haven't already, have a go at invoking the different endpoints and look at the log-messages that appear in the Katacoda-terminal. Notice that, for some reason, there are two spaces between the timestamp and the log-level when the log-level is `INFO`, and only one space when it is `ERROR`. We will have to take this quirk into account when parsing our logs.
 
 Next, we will see how to make our logs persist in a log file at our chosen location. Shut down the running application (`Ctrl+C`) and proceed to the next step.
