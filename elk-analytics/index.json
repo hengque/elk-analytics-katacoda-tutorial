@@ -44,7 +44,7 @@
     "showdashboard": true,
     "dashboards": [
       {"name": "Base application", "port": 8080},
-      {"name": "Elastic search", "port": 9200},
+      {"name": "Elasticsearch", "port": 9200},
       {"name": "Kibana", "port": 5601}
     ]
   },
