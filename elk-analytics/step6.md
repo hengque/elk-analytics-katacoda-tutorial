@@ -72,4 +72,10 @@ grok {
   }
 ```
 
-kan ev. skapa lista sen över vilka som hälsas mest på (och hur många ggr)
+kan ev. skapa lista sen över vilka som hälsas mest på (och hur många ggr), ser ut såhär:
+
+![Names-before](./assets/names-before.png)
+
+Och sen anropar vi `/greeting`-endpointen några ggr och klickar sedan på Refresh i dashboarden för att se:
+
+![Names-after](./assets/names-after.png)
