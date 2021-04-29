@@ -24,9 +24,9 @@ Next, clone the repo, enter the new folder, and invoke `docker-compose` to build
   margin-right: 10px;
   background-color: aliceblue;
   padding: 1em;">
-A <i>container</i> consists of an application and everything that application needs to run, in terms of dependencies, needed system configurations, and so on. Containerization is a useful way of shipping software to make sure they can be run anywhere, assuming software capable of running the containers are available.</br>
+A <i>container</i> consists of an application and everything that application needs to run, in terms of dependencies, needed system configurations, and so on. Containerization is a useful way of shipping software to make sure they can be run anywhere, assuming software capable of running the containers is available.</br>
 </br>
-In this tutorial, we are using <code>docker-compose</code> (pre-installed in our Katacoda environment) to start three containers; one containing Elasticsearch, one containing Logstash, and one containing Kibana. The <code>--no-start</code>-flag passed to <code>docker-compose</code> is used to make it build the containers without starting them (we will want to make some configurations before we start).</br>
+In this tutorial, we are using <code>docker-compose</code> (pre-installed in our Katacoda environment) to start three containers: one containing Elasticsearch, one containing Logstash, and one containing Kibana. The <code>--no-start</code>-flag passed to <code>docker-compose</code> is used to make it build the containers without starting them (we will want to make some configurations before we start).</br>
 </br>
 You can read more about <code>docker-compose</code> <a href="https://docs.docker.com/compose/reference/">here</a> (and specifically about <code>docker-compose up</code> <a href="https://docs.docker.com/compose/reference/up/">here</a>).
 
@@ -39,13 +39,13 @@ There are various ways to run the ELK stack. You can:
 * use the [hosted ELK service](https://www.elastic.co/cloud/elasticsearch-service/signup?baymax=rtp&storm=whatis-all&elektra=whatis-elkstack)
 * run a containerized version where everything is "connected" already
 
-For simplicity's sake, we have chosen the third option by using a Github repository (the `docker-elk` repo you cloned above) that already contains the needed software and configurations. This will allow us to setup the stack quickly and actually focus on using its features.
+For simplicity's sake, we have chosen the third option by using a Github repository (the `docker-elk` repo you cloned above) that already contains the needed software and configurations. This will allow us to set up the stack quickly and actually focus on using its features.
 
 ## Why log management?
 
 At this point, it might be good to motivate why we even need log management tools like the ELK stack. The answer is that these tools are highly useful whenever searching and aggregating log data from applications is of interest. This can provide useful insights for managing an application by e.g. showing where crashes are most likely to occur, or showing how users are interacting with your application.
 
-Without log management tools like the ELK stack, the process of writing custom scripts to scan extensive log outputs of large applications can be daunting. This task is further complicated in the setting of distributed applications (i.e. applications running on several computers, connected via a network) where logs end up in different places. Applications implemented using the *microsevices architecture* are often quoted as being especially benefitted from log management tools.
+Without log management tools like the ELK stack, the process of writing custom scripts to scan extensive log outputs of large applications can be daunting. This task is further complicated in the setting of distributed applications (i.e. applications running on several computers, connected via a network) where logs end up in different places. This is especially the case for applications that are implemented using the *microsevices architecture*, given their distributed nature (and tendency to have services implemented in many different languages and frameworks).
 
 ## A closer look at the ELK stack
 
@@ -57,7 +57,7 @@ Without log management tools like the ELK stack, the process of writing custom s
 * use Elasticsearch as a data repository containing the data it received from Logstash
 * use Kibana ... testar en annan approach här nere: -->
 
-As mentioned, the ELK stack consists of Elasticsearch, Logstash, and Kibana. In the coming steps, we will use Logstash to pull log messages from our `spring.log` file. Then, configure Logstash to parse the messages and tag different parts of them (timestamps, log-levels, pid, actual message, etc.). Finally, Logstash will send the data to Elasticsearch.
+As mentioned, the ELK stack consists of Elasticsearch, Logstash, and Kibana. In the coming steps, we will use Logstash to pull log messages from our `spring.log` file. Then, we'll configure Logstash to parse the messages and tag different parts of them (timestamps, log-levels, pid, actual message, etc.). Finally, Logstash will send the data to Elasticsearch.
 
 We will not have to change any configurations having to do with Elasticsearch; it will simply store the data Logstash sends to it.
 

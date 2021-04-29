@@ -9,6 +9,9 @@ We have learned that Logstash is a data-processing pipline that:
 
 This three-step process is handled in the `logstash.conf` file in the `docker-elk/logstash/pipeline` folder. Navigate to this file and open it in the editor. TODO: Gör detta lättare.
 
+Testar open:
+`/root/docker-elk/logstash/pipeline/logstash.conf`{{open}}
+
 Each of the three steps are handled by so-called *plugins*. The first step uses *input plugins*, the second uses *filter plugins*, and the third uses *output plugins*.
 
 <details>
@@ -55,7 +58,12 @@ Now we are finally ready to start the stack. Make sure you are in the `docker-el
 This can take some time, and you are encouraged to move to the next step as things are starting. Note that the stack is not yet up and running when you see:
 
 ```
-TODO: fyll i hur det ser ut innan den är uppe
+$ docker-compose up
+Starting docker-elk_elasticsearch_1 ... done
+Starting docker-elk_logstash_1      ... done
+Starting docker-elk_kibana_1        ... done
 ```
 
-You will know the stack is up and running when the terminal outputs messages from `kibana_1` and `elasticsearch_1`.
+Even though the `done`-messages are there, the stack is – in fact – not yet running.
+
+You will know the stack is up and running when the terminal outputs lots of messages from `kibana_1` and `elasticsearch_1`.
