@@ -1,12 +1,14 @@
 <p></p>
 
-## Kom på ngn bra titel här
+## Displaying our data in Kibana
 
-När allt har byggt klart är det dags att öppna Kibana.
+Now it's nearly time to start Kibana, where we will see our data. First, to make sure the ELK stack is up and running, open a new terminal tab, choose `Select port to view on Host 1`, and enter port 9200. This is the endpoint that Elasticsearch is hosted at.
 
-Då har vi antingen predefined tabs för Kibana (och ev. Elasticsearch), eller så säger vi till dem att öppna en ny och välja port själva (5601 och ev. 9200). Påpekar credentials (elastic och changeme).
+The credentials are:
+username: elastic
+password: changeme
 
-Påpekar också att man kan gå in på 9200 först för att se att det funkar, ska se något i stil med:
+If the ELK stack is up and running, you should see a message similar to this one:
 
 ```
 {
@@ -28,7 +30,8 @@ Påpekar också att man kan gå in på 9200 först för att se att det funkar, s
 }
 ```
 
-(och om Kibana någonsin bråkar är det värt att gå in på ES först och se om det är uppe)
+(If Kibana ever gives you trouble, it's worth to do this process again to make sure that Elasticsearch is up)
+
 
 Iaf, berättar hur man klickar runt i Kibana för att skapa index-pattern:et `logstash-*` och ser datan dyka upp i 'Discover'-delen (och påpeka att de är sorterade "äldst överst" så man får scrolla ner för att se det senaste). Gör användaren uppmärksam på 'fälten' (betona att det är ett betydelsefullt ord på något sätt) i panelen nere till vänster, och tipsa om att titta runt lite.
 
