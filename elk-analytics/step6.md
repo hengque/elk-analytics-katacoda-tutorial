@@ -58,6 +58,10 @@ Och klickar sedan på Refresh i dashboarden för att se:
 
 ![Errors-after](./assets/errors-after.png)
 
+<hr>
+
+...
+
 Lägg in detta för att extrahera vem som hälsas på:
 
 ```
