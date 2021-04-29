@@ -5,8 +5,8 @@
 Now it's nearly time to start Kibana, where we will see our data. First, to make sure the ELK stack is up and running, open a new terminal tab, choose `Select port to view on Host 1`, and enter port 9200. This is the endpoint that Elasticsearch is hosted at.
 
 The credentials are:
-username: elastic
-password: changeme
+* username: elastic
+* password: changeme
 
 If the ELK stack is up and running, you should see a message similar to this one:
 
