@@ -1,10 +1,13 @@
 <p></p>
 
-## Summary and take-home message
+## Summary
 
-Koppla tillbaka till motivationen bakom log management tools i steg 3, skriv någon fin sammanfattning typ "we have seen how... the ELK stack is a powerful tool to... limited only by your imagination..."
+We have seen how to use the ELK stack for log management. With Logstash, we ingested data from a log-file, parsed the messages to tag them with various labels, and sent the data on to Elasticsearch. With Kibana, we were able to browse that data, and create visualizations based on the labels Logstash added.
 
-Kan ge 2-3 andra "exotiska" förslag också för att "bredda det lite", typ
+We also discussed how log management tools are helpful to aggregate log messages from large applications, and especially from distributed applications. By now, you hopefully have an appreciation for why these tools can be useful.
 
-"tänk att en applikation kan köras här borta och hämta saker från slack och github och din applikation, den kan skicka till Kibana, din mail, och posta till hemsida" blabla (kan snabbt ögna igenom input- filter- och output-plugins listorna som jag länkar, välja några som ser coola ut och skriva ihop en mening eller två för inspiration; de jag nämnde (slack, mail, github etc) är plugins jag har för mig att jag sett)
+Suffice it to say, however, we have only scratched the surface of what is possible with tools like the ELK stack. We only read data from a file, but you can also ingest data from things like Github webhooks, Twitter feeds, SQLite databases, [and more](https://www.elastic.co/guide/en/logstash/current/input-plugins.html). Apart from sending data to Elasticsearch, you can send it in email, to HTTP(S) endpoints, to databases like MongoDB and Redis, and even other monitoring tools (such as Datadog).
 
+The containerized version of the ELK stack used in this tutorial (repo [here](https://github.com/deviantony/docker-elk)) is a simple and useful starting-ground for doing your own experiments with this powerful technology stack. Having completed this tutorial, we hope you feel well-equipped to venture forth on your own and discover even more of what is possible.
+
+Good luck, and thanks for sticking with us to the end!
