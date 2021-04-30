@@ -7,8 +7,8 @@ Now it's nearly time to visit and configure Kibana, where we will see our data. 
 If it just says "Connecting to Port 9200", it means Elasticsearch is not up and running yet. Try it again after about 30-60 seconds, and it will work.
 
 The credentials are:
-* username: elastic
-* password: changeme
+* username: `elastic`{{copy}}
+* password: `changeme`{{copy}}
 
 If the ELK stack is up and running, you should see a message similar to this one:
 
@@ -40,7 +40,7 @@ The first time you visit Kibana you will get a "Welcome" landing page with the c
 
 <!-- Kanske lägg in bild på startsidan här, lade en bild under assets/kibana-startpage.png -->
 
-Then, open the hamburger menu (three horizontal dashes) in the top left and click on `Discover` under `Analytics`. If your data pipline is correctly setup, the page will say that you have data in Elasticsearch, and that you should create an index pattern. Click the `Create index pattern` button and enter `logstash`{{copy}} into the index pattern name. It should say that your index pattern has matches in a green box below. Continue to the next step, and choose the timefield `@timestamp` from the dropdown menu. Then, click the `Create index pattern button`.
+Then, open the hamburger menu (three horizontal dashes) in the top left and click on `Discover` under `Analytics`. If your data pipline is correctly setup, the page will say that you have data in Elasticsearch, and that you should create an index pattern. Click the `Create index pattern` button and enter `logstash*`{{copy}} into the index pattern name. It should say that your index pattern has matches in a green box below. Continue to the next step, and choose the timefield `@timestamp` from the dropdown menu. Then, click the `Create index pattern button`.
 
 <!-- TODO: Se till att @timestamp timefield inte har sönder ngt annat. Jag valde alltid det undre alternativet, dvs att jag inte ville använda ngt timefield. /Andreas 
 Ingen aning om vad den faktiska skillnaden blir, så om du känner dig säkrare med det andra så kör vi på det / Henrik -->
