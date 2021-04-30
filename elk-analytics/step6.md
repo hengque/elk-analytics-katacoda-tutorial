@@ -81,7 +81,7 @@ There is also syntax that lets us [define our own critera for matching](https://
 </br>
 For example, the string `Additions: (?<calc_additions>[0-9]+)` will match a string containing <code>Additions: </code> followed by an arbitrary sequence of numbers, and will create a pair with the key "calc_additions" and the value of the number sequence. So, a log-message of "Additions: 42" would create the key-value pair `(calc_additions, 42)`.</br>
 </br>
-You can read more about grok <a href="https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html ">here</a>. To help you debug your grok strings, <a href="https://grokdebug.herokuapp.com/">here</a> is a tool that lets you enter a grok pattern and some input to see if there is a match.
+You can read more about grok <a href="https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html">here</a>. To help you debug your grok strings, <a href="https://grokdebug.herokuapp.com/">here</a> is a tool that lets you enter a grok pattern and some input to see if there is a match.
 
 </div>
 
