@@ -54,8 +54,6 @@ filter {
 }
 ```{{copy}}
 
-TODO: Lägg till en details-miljö här där vi skriver om syntaxen lite grann.
-
 <details>
 <summary>Grok syntax</summary>
 
@@ -67,14 +65,21 @@ TODO: Lägg till en details-miljö här där vi skriver om syntaxen lite grann.
 <!-- TODO: Inte säker på vad skillnaden är på att ha flera groks och att bara lista flera alternativ inne i en, och inte heller säker på saker som match => "message" :/ 
 Vidare vet jag inte om man kallar det control signals 
 
-Sen också, visst för att denna logiskt borde ligga här, men man skulle vilja att användaren startar elk-stack på nytt innan hen läser detta egentligen. Borde vi därför flytta detta längre ner? -->
+Sen också, visst för att denna logiskt borde ligga här, men man skulle vilja att användaren startar elk-stack på nytt innan hen läser detta egentligen. Borde vi därför flytta detta längre ner?
+TODO Andreas: läs denna kommentar igen när resten är fixat -->
 
-The output from logstash is json data that we forward to elasticsearch. With the help of the grok plugin we can modify what key value pairs are included in our resulting json objects.</br>
+The output from Logstash is `json` data that we forward to Elasticsearch. With the help of the grok plugin we can modify what (key, value)-pairs are included in our resulting `json` objects.</br>
 </br> 
-In each instance of the grok plugin we specify what we want the recieved "message":s to match with. This is done in an array, where each item is a regex-like string. Within one of these strings we can define certain control signal that add a key-value pair to our output json, given that the string matches the "message". For example, the string
-<code>Greeted: %{WORD:greeted}</code> will match input that contains exactly <code>Greeted: </code> followed by an arbitrary word (where what constitutes a word is defined in the grok control signal). This will create a pair in our output with the key "greeted" and the value of whatever word was matched (that is, the control signal essentially means <code>${VALUE:key}</code>).</br>
+In each instance of the grok plugin we specify what we want the received "message":s to match with. This is done in an array in which each element is a regex-like string. Within each of these strings we can define patterns that will match the messages and add a key-value pair to our output json, given that the string matches the pattern.</br>
 </br>
-Another type of control signal lets us define our own critera for matching, instead of using predefined ones such as "WORD". For example the string <code>Additions: (?<calc_additions>[0-9]+)</code>. Here we have defined that a string containing <code>Additions: </code> followed by an arbitrary sequence of numbers will create a pair with the key "calc_additions" and the value of the number sequence.</br>
+For example, the array-element
+<code>Greeted: %{WORD:greeted}</code> will match input that contains exactly <code>Greeted: </code> followed by an arbitrary word (WORD is one of ~120 predefined grok patterns, you can see their definitions [here](https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/ecs-v1/grok-patterns)).</br>
+</br>
+This will create a pair in our `json` output with the key "greeted" and the value of whatever word was matched (in other words, the string pattern essentially means: <code>${VALUE:key}</code>). So, a log-message of "Greeted: World" would create the key-value pair `(greeted, "World")`.</br>
+</br>
+There is also syntax that lets us [define our own critera for matching](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html#_custom_patterns), instead of using predefined ones such as "WORD". To do this, we write `(?<field_name>the pattern here)`.</br>
+</br>
+For example, the string <code>Additions: (?<calc_additions>[0-9]+)</code> will match a string containing <code>Additions: </code> followed by an arbitrary sequence of numbers, and will create a pair with the key "calc_additions" and the value of the number sequence. So, a log-message of "Additions: 42" would create the key-value pair `(calc_additions, 42)`.</br>
 </br>
 You can read more about grok <a href="https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html ">here</a>. To help you debug your grok strings, <a href="https://grokdebug.herokuapp.com/">here</a> is a tool that lets you enter a grok string and some input to see if there is a match.
 
@@ -97,10 +102,5 @@ After some log messages appear (you can check `Terminal` to verify that they do)
 If you have used the calculator you might see fields such as `calc_divisions`, or `calc_result`. Most messages (apart from Java exceptions) should also have `log_level` fields that indicate if they were `INFO` messages or `ERROR` messages. The `greeted` field includes the name of the greeted person.
 
 By clicking on one of these fields you can see how many times they have appeared in your data, and with what values.
-
-<!-- Möjligen märkligt att använda 'final' här (i stycket nedan dvs), eftersom vi kommer ha ett som heter 'finish' efter det. Men på det sista steget kommer vi väl egentligen inte göra något mer än att sammanfatta och ha ngt take-home message, så jag tycker det funkar 
-
-Jag tycker inte det är ett problem /Henrik
--->
 
 In the next and final step, we will use the `Dashboard` functionality of Kibana to create some data visualizations based on our data.
