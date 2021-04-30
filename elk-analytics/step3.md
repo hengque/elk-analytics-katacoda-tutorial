@@ -4,7 +4,7 @@
 
 It will take some time to fetch and build the containers (containers are briefly explained below) needed to get the ELK stack up and running. Therefore, the next commands will clone the stack and invoke `docker-compose` (also explained below) to let it set up while you read the information about ELK as the stack is initializing.
 
-First, make sure you go back to the `/root`-folder. This is done because the tutorial assumes both `gs-serving-web-content` and `docker-elk` are in the `/root` folder.
+First, go back to the first terminal tab, and stop the base application (<kbd>Ctrl</kbd>+<kbd>C</kbd>) if it is still running. This will speed up the process of building the containers. Then, make sure you go back to the `/root`-folder. This is done because the tutorial assumes both `gs-serving-web-content` and `docker-elk` are in the `/root` folder.
 
 `cd /root`{{execute}}
 
@@ -90,4 +90,4 @@ Creating docker-elk_kibana_1        ... done
 Creating docker-elk_logstash_1      ... done
 ```
 
-Since it takes some time to start the services, we will take care of the configuration first. In the next step, we will start by configuring Logstash.
+Since it takes some time to start the containers (remember, we've only *built* them so far), we will take care of the configuration first. In the next step, we will start by configuring Logstash.
