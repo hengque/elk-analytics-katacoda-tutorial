@@ -67,7 +67,7 @@ This graph shows that the vast majority of the valid expressions come from users
 
 Open a new panel of type `Lens`. Drag and drop `calc_request.keyword` from the left area to the middle area. You should now have a suggested graph for this field. In the area to the right of the graph, click the box under `Horizontal axis` (it probably says "Top values of calc_request.​keyword"). 
 
-Next choose `Date histogram` at the top. This should automatically give you a time graph for the time period specified previously. If you chose some high value here (that was way above the time you have spent with this tutorial) you might have a rather boring graph with just a bar or 2 to the far right. 
+Next choose `Date histogram` at the top. This should automatically give you a time graph for the time period specified previously. If you chose some high value here (that was way above the time you have spent with this tutorial) you might have a rather boring graph with just a bar or two to the far right. 
 
 If you manage to keep the tutorial going for long enough and keep using the calculator, this will become more interesting. But perhaps more interesting for the time being would be to adjust the timeframe to the one you have spent in the tutorial. Like before this can be done to the right of the search bar (remember to click apply). But you can also click and drag over the area of the graph that you want to "zoom in" on to automatically tighten your timeframe. Doing this a couple of times might give you a graph looking something like the one below. Do note that this timeframe will affect how you view data in the rest of Kibana as well. So in case some of your data appears to be missing you might have to widen your timeframe.
 
