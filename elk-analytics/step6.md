@@ -4,7 +4,7 @@
 
 First, shut down the ELK stack (<kbd>Ctrl</kbd>+<kbd>C</kbd>) in `Terminal 2` and close your Kibana browser window. Then, open `logstash.conf` (it should still be open as a tab in the editor view).
 
-It's time to add our own filters. For this, we will use a *filter plugin* called the *grok plugin*. You can think of it as a *regex*-ish parser. We'll write *grok patterns* that will match our messages and extract values into fields (these will be added to the fields you saw in Kibana in the previous step).
+It's time to add our own filters. For this, we will use a *filter plugin* called the *grok plugin*. You can think of it as a regex-ish parser. We'll write *grok patterns* that will match our messages and extract values into fields (these will be added to the fields you saw in Kibana in the previous step).
 
 <!--
 En aside om grok-plugin, länka till https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html och http://grokdebug.herokuapp.com/
@@ -44,7 +44,7 @@ filter {
 
 TODO: Lägg till en details-miljö här där vi skriver om syntaxen lite grann.
 
-If the base application is not running (check the first terminal tab, `Terminal`), now is the time to start it again. Then, in `Terminal 2`, start the ELK stack once again:
+If the base application is not running (check the first terminal tab, `Terminal`), now is the time to start it again (`./mvnw spring-boot:run`{{execute T1}}). Then, in `Terminal 2`, start the ELK stack once again:
 
 `docker-compose up`{{execute T2}}
 
