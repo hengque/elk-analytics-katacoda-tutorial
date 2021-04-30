@@ -41,6 +41,18 @@ file {
 ```{{copy}}
 *(Tip: You can click the box to copy the content!)*
 
+TODO: Ändra till
+```
+file {
+    path => "/usr/share/logstash/logfile.log"
+    start_position => beginning
+  }
+```
+detta gör att Logstash läser in allt i filen, även det som lades till innan Logstash kände till den
+(https://www.elastic.co/guide/en/logstash/current/plugins-inputs-file.html#plugins-inputs-file-start_position)
+Förklara också varför vi gör det, förstås. Default-värdet är 'tail' och då behandlas filen som en "livestream" (står mer om detta i länken ovan). OBS: det ska vara 'beginning' som det är, alltså utan citattecken (annars kraschar logstash).
+Utan den så finns det inga loggar första gången man startar Kibana, utan man måste köra basapplikationen igen för att den ska skapa nya loggmeddelanden.
+
 Now, since our ELK stack is running in containers, we need to map the "outside" of the containers to the "inside". This is done in the configuration file for `docker-compose`, called `docker-compose.yml`.
 
 Open `docker-elk/docker-compose.yml`{{open}} and add the following under the `volumes` attribute in the `logstash`-part of the file (i.e. after line 42):
