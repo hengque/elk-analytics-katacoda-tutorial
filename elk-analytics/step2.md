@@ -43,8 +43,4 @@ Now, with our newly added log-folder, let's again start the base application and
 
 When it has started, you should be able to see the log messages appear in the `/root/logs/spring.log` file as well. Click the following command to invoke it in a new terminal `cat /root/logs/spring.log`{{execute T2}}, so that you can make sure the log file is being updated with your log messages.
 
-<!--
-(TODO: Kanske ha en predefined tab här, eller på ngt sätt göra detta steg lite "snällare" (något execute-kommando eller så). Kanske inte ens ber dem gå till rätt mapp i den nya tabben utan istället bara säger åt dem att köra `cat /root/logs/spring.log` i nya tabben? Tror man t om kan ha en predefined tabb som dyker upp i ett visst steg, och som kör ett visst kommando när den öppnas. Det vore ju perfekt här).
--->
-
 Now, it is high time to download and start using the ELK stack!
