@@ -40,11 +40,11 @@ The first time you visit Kibana you will get a "Welcome" landing page with the c
 
 <!-- Kanske lägg in bild på startsidan här, lade en bild under assets/kibana-startpage.png -->
 
-Then, open the hamburger menu (three horizontal dashes) in the top left and click on `Discover` under `Analytics`. If your data pipline is correctly setup, the page will say that you have data in Elasticsearch, and that you should create an index pattern. Click the `Create index pattern` button and enter `logstash`{{copy}} into the index pattern name. It should say that your index pattern has matches in a green box below. Continue to the next step, where you choose the timefield `@timestamp`. Then click the `Create index pattern button`.
+Then, open the hamburger menu (three horizontal dashes) in the top left and click on `Discover` under `Analytics`. If your data pipline is correctly setup, the page will say that you have data in Elasticsearch, and that you should create an index pattern. Click the `Create index pattern` button and enter `logstash`{{copy}} into the index pattern name. It should say that your index pattern has matches in a green box below. Continue to the next step, and choose the timefield `@timestamp` from the dropdown menu. Then, click the `Create index pattern button`.
 
 <!-- TODO: Se till att @timestamp timefield inte har sönder ngt annat. Jag valde alltid det undre alternativet, dvs att jag inte ville använda ngt timefield. /Andreas -->
 
-Once again, expand the hamburger menu at the top left and click on `Discover` under `Analytics`. To the right of the search bar, update the timeframe to something more than 15 minutes (for example 15 hours) to ensure that all data you have generated is encompassed within your chosen timeframe.
+Once again, expand the hamburger menu at the top left and click on `Discover` under `Analytics`. To the right of the search bar, click the calendar icon and update the timeframe to something more than 15 minutes (for example 15 hours) to ensure that all data you have generated is encompassed within your chosen timeframe (don't forget to click `Apply`).
 
 If everything is working, you will now see all the log messages generated so far.
 
