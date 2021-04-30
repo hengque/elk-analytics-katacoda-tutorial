@@ -36,22 +36,26 @@ In the input step, we also want to tell Logstash to pull data from our log file.
 
 ```
 file {
-	path => "/usr/share/logstash/logfile.log"
-}
-```{{copy}}
-*(Tip: You can click the box to copy the content!)*
-
-TODO: Ändra till
-```
-file {
     path => "/usr/share/logstash/logfile.log"
     start_position => beginning
   }
-```
-detta gör att Logstash läser in allt i filen, även det som lades till innan Logstash kände till den
-(https://www.elastic.co/guide/en/logstash/current/plugins-inputs-file.html#plugins-inputs-file-start_position)
-Förklara också varför vi gör det, förstås. Default-värdet är 'tail' och då behandlas filen som en "livestream" (står mer om detta i länken ovan). OBS: det ska vara 'beginning' som det är, alltså utan citattecken (annars kraschar logstash).
-Utan den så finns det inga loggar första gången man startar Kibana, utan man måste köra basapplikationen igen för att den ska skapa nya loggmeddelanden.
+```{{copy}}
+*(Tip: You can click the box to copy the content!)*
+
+
+<details>
+<summary>start_position</summary>
+
+<div style="display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: aliceblue;
+  padding: 1em;">
+
+The default behavior of Logstash is to start reading at the end of the specified file, thus only reading new data that is added after Logstash has been started. We include `start_position` so that previously added logs are also included in our input for Logstash. This will not result in duplicate reads since Logstash only reads from the beginning the first time it reads the file. <a href="https://www.elastic.co/guide/en/logstash/current/plugins-inputs-file.html#plugins-inputs-file-start_position">Here</a> is the official documentation.
+</div>
+
+</details>
 
 Now, since our ELK stack is running in containers, we need to map the "outside" of the containers to the "inside". This is done in the configuration file for `docker-compose`, called `docker-compose.yml`.
 
