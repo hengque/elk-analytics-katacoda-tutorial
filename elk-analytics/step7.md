@@ -65,7 +65,9 @@ Next, in the layers to the right click the box under `Vertical axis` to rename t
 You should now have a graph that looks something like this:
 ![Calculator-operators](./assets/calc_operator_graph.png)
 
-This graph shows that the vast majority of the valid expressions come from users entering a number without any operators (and also pressing the equals button to evaluate it). This is the leftmost group of bars. The middle group shows how often an expression is evaluated containing exactly one type of operator (`3+2`, `24/8`, and so on). For instance, the middle blue bar shows that only two expressions containing exactly one division have been evaluated. Lastly, the third group shows that the only operator that has appeared more than once in an expression is the multiplication operator, appearing twice in one expression (for example: `5*3 + 8*9`).
+This graph shows that the vast majority of the valid expressions come from users entering a number without any operators (and also pressing the equals button to evaluate it). This is the leftmost group of bars. Each bar represent how many expression have been evaluated without the corresponding operator (for instance the purple bar shows that 12 expressions have been evaluated without any subtractions). Note that an expression such as `5+6-2` would increase the bars of multiplications and divisions by 1 since they are missing.
+
+The middle group shows how often an operator has appeared exactly once in an expression (`3+2-5-3` has `+` exactly once, `24/8` has `/` exactly once, and so on). For instance, the middle blue bar shows that only two expressions containing exactly one division have been evaluated. Lastly, the third group shows that the only operator that has appeared more than once in an expression is the multiplication operator, appearing twice in one expression (for example: `5*3 + 8*9`).
 
 <b style="font-size:20px;">3. A graph showing how the traffic of the calculator page varies over time</b>  
 
