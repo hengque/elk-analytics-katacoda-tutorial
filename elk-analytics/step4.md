@@ -66,6 +66,7 @@ Open `docker-elk/docker-compose.yml`{{open}} and add the following under the `vo
     source: /root/logs/spring.log
     target: /usr/share/logstash/logfile.log
 ```{{copy}}
+**Note that the indentation has to be correct or else docker-compose will complain. Note the indentation style used in the file and follow it**
 
 This will map our `spring.log` file to a file called `logfile.log` inside the container (recall this was the path we added in the file-plugin in `logstash.conf`).
 
