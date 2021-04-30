@@ -2,7 +2,7 @@
   "title": "ELK analytics (exemplified with Java Spring)",
   "description": "Learn how to use the ELK stack for application monitoring/analytics.",
   "difficulty": "Beginner",
-  "time": "15 minutes",
+  "time": "20 minutes",
   "icon": "fa-heartbeat",
   "details": {
     "steps": [
