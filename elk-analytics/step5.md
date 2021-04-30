@@ -2,7 +2,7 @@
 
 ## Displaying our data in Kibana
 
-Now it's nearly time to start Kibana, where we will see our data. First, to make sure the ELK stack is up and running, open Elasticsearch by clicking the `Elasticsearch` terminal tab. This terminal tab is configured to visit our localhost on port 9200. This is the endpoint that Elasticsearch is hosted at.
+Now it's nearly time to visit and configure Kibana, where we will see our data. First, to make sure the ELK stack is up and running, open Elasticsearch by clicking the `Elasticsearch` terminal tab. This terminal tab is configured to visit our localhost on port 9200. This is the endpoint that Elasticsearch is hosted at.
 
 If it just says "Connecting to Port 9200", it means Elasticsearch is not up and running yet. Try it again after about 30-60 seconds, and it will work.
 

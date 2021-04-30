@@ -53,9 +53,9 @@ Open `docker-elk/docker-compose.yml`{{open}} and add the following under the `vo
 
 This will map our `spring.log` file to a file called `logfile.log` inside the container (recall this was the path we added in the file-plugin in `logstash.conf`).
 
-Now we are finally ready to start the stack. Make sure you are in the `docker-elk` folder in the terminal, and execute:
+Now we are finally ready to start the stack. Make sure you are in the `docker-elk` folder (and still in the `Terminal 2` tab), and execute:
 
-`docker-compose up`{{execute}}
+`docker-compose up`{{execute T2}}
 
 This can take some time, and you are encouraged to move to the next step as things are starting. Note that the stack is not yet up and running when you see:
 
