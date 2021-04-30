@@ -41,6 +41,6 @@ Now, with our newly added log-folder, let's again start the base application and
 
 `./mvnw spring-boot:run`{{execute}}
 
-When it has started, you should be able to see the log messages appear in the `/root/logs/spring.log` file as well. Click the following command to invoke it in a new terminal `cat /root/logs/spring.log`{{execute T2}}, so that you can make sure the log file is being updated with your log messages.
+When it has started, you should be able to see the log messages appear in the `/root/logs/spring.log` file as well. Click the following command to invoke it in a new terminal `cat /root/logs/spring.log`{{execute T2}} (TODO: kolla om två klick krävs. lade in denna fula parentes så att vi inte missar att kolla), so that you can make sure the log file is being updated with your log messages.
 
 Now, it is high time to download and start using the ELK stack!
