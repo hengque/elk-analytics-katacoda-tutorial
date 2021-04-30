@@ -37,12 +37,46 @@ filter {
              ]
   }
 
-  ## TODO Henrik, calculator grok
-
+  grok {
+    match => {
+      "message" => [
+                "Times (?<calc_request>(post)|(get))(t)?ing (to )?calculator: ",
+                "(?<calc_expr_validity>((Inv)|V)alid) expression", 
+                "(?<calc_expr_validity>Division by zero!)",
+                "Additions: (?<calc_additions>[0-9]+)",
+                "Subtraction: (?<calc_subtraction>[0-9]+)",
+                "Multiplications: (?<calc_multiplications>[0-9]+)",
+                "Divisions: (?<calc_divisions>[0-9]+)",
+                "Resulting value: (?<calc_result>[0-9\.]+)"
+      ]
+    }
+  }
 }
-```{{copy}}
+```
+{{copy}}
 
 TODO: Lägg till en details-miljö här där vi skriver om syntaxen lite grann.
+
+<details>
+<summary>Grok syntax</summary>
+
+<div style="display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: aliceblue;
+  padding: 1em;">
+<!-- TODO: Inte säker på vad skillnaden är på att ha flera groks och att bara lista flera alternativ inne i en, och inte heller säker på saker som match => "message" :/ 
+Vidare vet jag inte om man kallar det control signals -->
+In each instance of the grok plugin we specify what we want the recieved "message":s to match with. This is done in an array, where each item is a regex-like string. Within one of these strings we can define certain control signal that add a key-value pair to our output json payload if the string matches. For example, the string
+<code>Greeted: %{WORD:greeted}</code> will match input that contains exactly "Greeted: " followed by an arbitrary word (where what constitutes a word is defined in the grok control signal). This will create a pair in our output with the key "greeted" and the value of whatever word was matched (that is, the control signal essentially means ${VALUE:key}).
+
+Another type of control signal lets us define our own critera for matching, instead of using predefined ones such as "WORD". For example the string <code>Additions: (?<calc_additions>[0-9]+)</code>. Here we have defined that a string containing "Additions: " followed by an arbitrary sequence of numbers will create a pair with the key "calc_additions" and the value of the number sequence.
+
+You can read more about grok <a href="https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html ">here</a>. To help you debug your grok strings, <a href=https://grokdebug.herokuapp.com/">here</a> is a tool that lets you enter a grok string and some input to see if there is a match.
+
+</div>
+
+</details>
 
 If the base application is not running (check the first terminal tab, `Terminal`), now is the time to start it again (`./mvnw spring-boot:run`{{execute T1}}). Then, in `Terminal 2`, start the ELK stack once again:
 
@@ -60,6 +94,9 @@ If you have used the calculator you might see fields such as `calc_divisions`, o
 
 By clicking on one of these fields you can see how many times they have appeared in your data, and with what values.
 
-<!-- Möjligen märkligt att använda 'final' här (i stycket nedan dvs), eftersom vi kommer ha ett som heter 'finish' efter det. Men på det sista steget kommer vi väl egentligen inte göra något mer än att sammanfatta och ha ngt take-home message, så jag tycker det funkar -->
+<!-- Möjligen märkligt att använda 'final' här (i stycket nedan dvs), eftersom vi kommer ha ett som heter 'finish' efter det. Men på det sista steget kommer vi väl egentligen inte göra något mer än att sammanfatta och ha ngt take-home message, så jag tycker det funkar 
+
+Jag tycker inte det är ett problem /Henrik
+-->
 
 In the next and final step, we will use the `Dashboard` functionality of Kibana to create some data visualizations based on our data.
