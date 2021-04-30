@@ -71,7 +71,7 @@ Next choose `Date histogram` at the top. This should automatically give you a ti
 
 If you manage to keep the tutorial going for long enough and keep using the calculator, this will become more interesting. But perhaps more interesting for the time being would be to adjust the timeframe to the one you have spent in the tutorial. Like before this can be done to the right of the search bar (remember to click apply). But you can also click and drag over the area of the graph that you want to "zoom in" on to automatically tighten your timeframe. Doing this a couple of times might give you a graph looking something like the one below. Do note that this timeframe will affect how you view data in the rest of Kibana as well. So in case some of your data appears to be missing you might have to widen your timeframe.
 
-Worth noting is that Kibana automatically chooses the width of the bars for you (for instance that each bar covers 30 seconds in time). You can manually change this in the same menu you chose `Date histogram` earlier.
+Worth noting is that Kibana automatically chooses the width of the bars for you (for instance it might make it so that each bar covers 30 seconds in time). You can manually change this in the same menu you chose `Date histogram` earlier.
 
 ![Calculator-traffic](./assets/calc_traffic_graph.png)
 
