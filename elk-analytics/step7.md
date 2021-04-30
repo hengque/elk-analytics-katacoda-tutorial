@@ -48,7 +48,7 @@ The calculator has been prepared with multiple logging utilities to allow variou
 
 Feel free to come up with various ways to visualize these results graphically in Kibana. Here, we shall just showcase a few simple examples.
 
-<b style="font-size:22px;">1. A graph showing the distribution between valid, invalid and zero-division expressions</b>  
+<b style="font-size:20px;">1. A graph showing the distribution between valid, invalid and zero-division expressions</b>  
 
 Open a new panel of type `Lens`. Drag and drop `calc_expr_validity.keyword` from the left area to the middle area. You should now have a suggested graph for this field. 
 
@@ -57,7 +57,7 @@ To get the graph shown in the below image, choose the graph type `Pie` in the dr
 You should now have a graph that looks something like this:
 ![Names-before](./assets/calc_validity_graph.png)
 
-<b style="font-size:24px;">2. A graph showing how many times operators apppear in expressions</b>
+<b style="font-size:20px;">2. A graph showing how many times operators apppear in expressions</b>
 
 Open a new panel of type `Lens`. Start by creating 3 additional layers; this can be done by clicking the plus symbol at the bottom of the right area. This is necessary to allow multiple fields to be added to a single graph. Next drag and drop `calc_additions.keyword`, `calc_divisions.keyword`, `calc_multiplications.keyword` and `calc_subtractions.keyword` from the left area to the middle area. You should now have a suggested graph for these 4 fields. 
 
@@ -71,7 +71,7 @@ You should now have a graph that looks something like this:
 
 This graph shows that the vast majority of the valid expressions come from users entering a number without any operators (and also pressing the equals button to evaluate it). This is the leftmost group of bars. The middle group shows how often an expression is evaluated with at exactly one of a certain operator. For instance, the middle green bar shows that only two expressions containing exactly one addition have been evaluated. Lastly, the third group shows that the only operator that has appeared more than once in an expression is the division operator, appearing twice in one expression.
 
-<b style="font-size:26px;">3. A graph showing how the traffic of the calculator page varies over time</b>  
+<b style="font-size:20px;">3. A graph showing how the traffic of the calculator page varies over time</b>  
 
 Open a new panel of type `Lens`. Drag and drop `calc_request.keyword` from the left area to the middle area. You should now have a suggested graph for this field. In the area to the right of the graph, click the box under `Horizontal axis` (it probably says "Top values of calc_request.​keyword"). 
 
