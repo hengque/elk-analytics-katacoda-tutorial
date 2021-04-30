@@ -44,7 +44,7 @@ file {
 
 
 <details>
-<summary>start_position</summary>
+<summary>File plugin's `start_position` setting</summary>
 
 <div style="display: block;
   margin-left: 10px;

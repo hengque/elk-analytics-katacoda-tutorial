@@ -95,9 +95,9 @@ If the base application is not running (check the first terminal tab, `Terminal`
 
 Now, open the `Kibana` terminal tab and go back to the `Discover`-section. You will see your old log messages from before. Since they were emitted before we added the grok filtering rules, they will not have the new fields.
 
-Therefore, you need to trigger the base application to emit some log messages. Generate some errors in the `/generate-errors`-endpoint, exend some greetings in the `/greeting`-endpoint, and show off your math skills in the `/calculator`-endpoint.
+Therefore, you need to trigger the base application to emit some log messages. Generate some errors in the `/generate-errors`-endpoint, extend some greetings in the `/greeting`-endpoint, and show off your math skills in the `/calculator`-endpoint.
 
-After some log messages appear (you can check `Terminal` to verify that they do), hit the blue `Refresh` button in Kibana, and they should appear there as well. Notice that our newly added fields have appeared, both on the messages in the long list, as well as in the panel to the left with `Available fields`.
+After some log messages appear (you can check `Terminal` to verify that they do), hit the blue `Refresh` button in Kibana, and they should appear there as well. Notice that our newly added fields have appeared, both on the messages in the long list to the right, as well as in the panel to the left with `Available fields`.
 
 If you have used the calculator you might see fields such as `calc_divisions`, or `calc_result`. Most messages (apart from Java exceptions) should also have `log_level` fields that indicate if they were `INFO` messages or `ERROR` messages. The `greeted` field includes the name of the greeted person.
 

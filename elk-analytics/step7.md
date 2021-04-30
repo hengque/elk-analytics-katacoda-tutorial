@@ -4,11 +4,11 @@
 
 Once again, navigate to the hamburger menu and this time click on `Dashboard`, just below `Discover`. Click `Create a new dashboard`, then `Create panel`, and choose `Lens`. You can now drag one of the fields from the left into the middle area and a graph will automatically be created for that field.
 
-The default suggestions of Kibana when you try this with different fields will not always be exactly what you want, however. So, we will now showcase three different ways you can visualize data. The first two are relatively simple, and the third one is a bit more involved.
+The default suggestions of Kibana when you try this with different fields will not always be exactly what you want, however (if you dragged some random fields to the middle area, you can always reset it by clicking the red `Reset layer` button to the right). So, we will now showcase three different ways you can visualize data. The first two are relatively simple, and the third one is a bit more involved.
 
 (Remember to save the graphs by clicking `Save and return` in the top right when you are done with them)
 
-## Ratio of info to error message
+## Ratio of info to error messages
 
 Pick the `Donut` chart-type from the dropdown. From the left area, drag the `log_level.keyword` field to the middle area. To change the colors to be more indicative, go to the area on the right and click `Top values of log_level.keyword`, scroll down to `Color palette`, and pick *Status* instead of *Default*.
 
@@ -16,9 +16,11 @@ This is what the resulting graph could look like:
 
 ![Errors-before](./assets/errors-before.png)
 
-If you invoke the `/generate-errors`-endpoint and hit `Refresh`, the graph will change:
+If you invoke the `/generate-errors`-endpoint in the base application and hit `Refresh`, the graph will change:
 
 ![Errors-after](./assets/errors-after.png)
+
+(When you are done, don't forget to save the graph by clicking `Save and return` in the top right!)
 
 <hr>
 
@@ -49,6 +51,8 @@ To get the graph shown in the below image, choose the graph type `Pie` in the dr
 You should now have a graph that looks something like this:
 ![Calculator-expression-validity](./assets/calc_validity_graph.png)
 
+(Make sure to invoke the `/calculator` endpoint in the base application with some invalid expressions such as divisions by zero or things like `7 + *` to make the graph more interesting!)
+
 <b style="font-size:20px;">2. A graph showing how many times operators appear in expressions</b>
 
 Open a new panel of type `Lens`. Start by creating 3 additional layers; this can be done by clicking the plus symbol at the bottom of the right area. This is necessary to allow multiple fields to be added to a single graph. Next drag and drop `calc_additions.keyword`, `calc_divisions.keyword`, `calc_multiplications.keyword` and `calc_subtractions.keyword` from the left area to the middle area. You should now have a suggested graph for these 4 fields. 
@@ -61,7 +65,7 @@ Next, in the layers to the right click the box under `Vertical axis` to rename t
 You should now have a graph that looks something like this:
 ![Calculator-operators](./assets/calc_operator_graph.png)
 
-This graph shows that the vast majority of the valid expressions come from users entering a number without any operators (and also pressing the equals button to evaluate it). This is the leftmost group of bars. The middle group shows how often an expression is evaluated with at exactly one of a certain operator. For instance, the middle blue bar shows that only two expressions containing exactly one division have been evaluated. Lastly, the third group shows that the only operator that has appeared more than once in an expression is the multiplication operator, appearing twice in one expression.
+This graph shows that the vast majority of the valid expressions come from users entering a number without any operators (and also pressing the equals button to evaluate it). This is the leftmost group of bars. The middle group shows how often an expression is evaluated containing exactly one type of operator (`3+2`, `24/8`, and so on). For instance, the middle blue bar shows that only two expressions containing exactly one division have been evaluated. Lastly, the third group shows that the only operator that has appeared more than once in an expression is the multiplication operator, appearing twice in one expression (for example: `5*3 + 8*9`).
 
 <b style="font-size:20px;">3. A graph showing how the traffic of the calculator page varies over time</b>  
 
@@ -82,4 +86,4 @@ If you have followed along with all the graphs we have created your `Dashboard` 
 
 ![Dashboard](./assets/dashboard.png)
 
-(Remember to save the dashboard before browsing something else in Kibana)
+(Remember to save the dashboard before browsing to something else in Kibana)
