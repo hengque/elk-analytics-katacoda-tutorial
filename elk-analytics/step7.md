@@ -49,7 +49,7 @@ To get the graph shown in the below image, choose the graph type `Pie` in the dr
 You should now have a graph that looks something like this:
 ![Calculator-expression-validity](./assets/calc_validity_graph.png)
 
-<b style="font-size:20px;">2. A graph showing how many times operators apppear in expressions</b>
+<b style="font-size:20px;">2. A graph showing how many times operators appear in expressions</b>
 
 Open a new panel of type `Lens`. Start by creating 3 additional layers; this can be done by clicking the plus symbol at the bottom of the right area. This is necessary to allow multiple fields to be added to a single graph. Next drag and drop `calc_additions.keyword`, `calc_divisions.keyword`, `calc_multiplications.keyword` and `calc_subtractions.keyword` from the left area to the middle area. You should now have a suggested graph for these 4 fields. 
 
