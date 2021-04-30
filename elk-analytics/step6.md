@@ -56,8 +56,10 @@ Therefore, you need to trigger the base application to emit some log messages. G
 
 After some log messages appear (you can check `Terminal` to verify that they do), hit the blue `Refresh` button in Kibana, and they should appear there as well. Notice that our newly added fields have appeared, both on the messages in the long list, as well as in the panel to the left with `Available fields`.
 
-If you have used the calculator you might see fields such as `calc_divisions`, or `calc_result`. By clicking on one of these fields you can see how many times they have appeared in your data, and with what values.
+If you have used the calculator you might see fields such as `calc_divisions`, or `calc_result`. Most messages (apart from Java exceptions) should also have `log_level` fields that indicate if they were `INFO` messages or `ERROR` messages. The `greeted` field includes the name of the greeted person.
 
-<!-- Möjligen märkligt att använda 'final' här, eftersom vi kommer ha ett som heter 'finish' efter det. Men på det sista steget kommer vi väl egentligen inte göra något mer än att sammanfatta och ha ngt take-home message, så jag tycker det funkar -->
+By clicking on one of these fields you can see how many times they have appeared in your data, and with what values.
+
+<!-- Möjligen märkligt att använda 'final' här (i stycket nedan dvs), eftersom vi kommer ha ett som heter 'finish' efter det. Men på det sista steget kommer vi väl egentligen inte göra något mer än att sammanfatta och ha ngt take-home message, så jag tycker det funkar -->
 
 In the next and final step, we will use the `Dashboard` functionality of Kibana to create some data visualizations based on our data.
