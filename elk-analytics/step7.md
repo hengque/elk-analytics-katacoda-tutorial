@@ -4,23 +4,17 @@
 
 Once again, navigate to the hamburger menu and this time click on `Dashboard`, just below `Discover`. Click `Create a new dashboard`, then `Create panel`, and choose `Lens`. You can now drag one of the fields from the left into the middle area and a graph will automatically be created for that field.
 
-The default suggestions of Kibana when you try this with different fields will often not be what you want, however. So, we will now showcase three different ways you can visualize data.
+The default suggestions of Kibana when you try this with different fields will not always be exactly what you want, however. So, we will now showcase three different ways you can visualize data. The first two are relatively simple, and the third one is a bit more involved.
 
 ## Ratio of info to error message
 
-Välj donut-chart.
-Dra in log_level.keyword.
-För finare färger, gå till panelen till höger och klicka på vad det nu står där, scrolla ner till color palette, och välj "Status"
+Pick the `Donut` chart-type from the dropdown. From the left area, drag the `log_level.keyword` field to the middle area. To change the colors to be more indicative, go to the area on the right and click `Top values of log_level.keyword`, scroll down to `Color palette`, and pick *Status* instead of *Default*.
 
-Såhär ser det ut när den är skapad (@Henrik: mitt förslag är att vi inte inkluderar bilder varje steg här, utan bara en fin bild i slutet på hur de tre ser ut tillsammans; bilderna här är bara för "debugging" för oss):
+This is what the resulting graph could look like:
 
 ![Errors-before](./assets/errors-before.png)
 
-Och sen anropar vi `/generate-errors`-endpointen:
-
-![Errors-generated](./assets/errors-generated.png)
-
-Och klickar sedan på Refresh i dashboarden för att se:
+If you invoke the `/generate-errors`-endpoint and hit `Refresh`, the graph will change:
 
 ![Errors-after](./assets/errors-after.png)
 
@@ -28,15 +22,11 @@ Och klickar sedan på Refresh i dashboarden för att se:
 
 ## Show who's popular (i.e. most greeted)
 
-Välj data table.
-Dra in greeted.keyword
-Borde räcka
+Pick the 'Data table' chart-type from the dropdown. From the left area, drag the `greeted.keyword` field to the middle area.
 
-![Names-before](./assets/names-before.png)
+This is what the resulting graph could look like:
 
-Och sen anropar vi `/greeting`-endpointen några ggr och klickar sedan på Refresh i dashboarden för att se:
-
-![Names-after](./assets/names-after.png)
+![Names-before](./assets/bunny-data-table.png)
 
 ## How are people using the calculator?
 
