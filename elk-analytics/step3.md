@@ -6,15 +6,15 @@ It will take some time to fetch and build the containers (containers are briefly
 
 First, go back to the first terminal tab, and stop the base application (<kbd>Ctrl</kbd>+<kbd>C</kbd>) if it is still running. This will speed up the process of building the containers. Then, go back to `Terminal 2` (we will use `Terminal` when we want to run the base application, and `Terminal 2` to run the ELK stack), and make sure you are in the `/root`-folder. This is done because the tutorial assumes both `gs-serving-web-content` and `docker-elk` are in the `/root` folder.
 
-`cd /root`{{execute}}
+`cd /root`{{execute T2}}
 
 Next, clone the repo, enter the new folder, and invoke `docker-compose` to build the containers.
 
-`git clone https://github.com/deviantony/docker-elk.git`{{execute}}
+`git clone https://github.com/deviantony/docker-elk.git`{{execute T2}}
 
-`cd docker-elk`{{execute}}
+`cd docker-elk`{{execute T2}}
 
-`docker-compose up --no-start`{{execute}}
+`docker-compose up --no-start`{{execute T2}}
 
 <details>
 <summary>Containers and docker-compose</summary>
