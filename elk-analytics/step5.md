@@ -46,11 +46,8 @@ Then, open the hamburger menu (three horizontal dashes) in the top left and clic
 
 Once again, expand the hamburger menu at the top left and click on `Discover` under `Analytics`. To the right of the search bar, update the timeframe to something more than 15 minutes (for example 15 hours) to ensure that all data you have generated is encompassed within your chosen timeframe.
 
-In the scrollable panel to the left you have `Available fields`, where you can see all the attributes that are available for your data. If you have used the calculator you might see fields such as calc_divisions, or calc_result. By clicking on one of these fields you can see how many times they have appeared in your data, and with what values.
+If everything is working, you will now see all the log messages generated so far.
 
-Once again navigate to the hamburger menu and this time click the `Dashboard` just below `Discover`. Click `Create a new dashboard`, then `Create panel`, and choose `Lens`. You can now drag one of the fields from the left into the middle area and a graph will automatically be created for that field.
+In the scrollable panel to the left you have `Available fields`, where you can see all the attributes that are available for your data. As we have not yet filtered our messages in Logstash, you will only see the default fields that were extracted automatically for us. The `message` field will contain the actual contents of our log messages, and this is something we'll use in the next step.
 
-
-Iaf, berättar hur man klickar runt i Kibana för att skapa index-pattern:et `logstash-*` och ser datan dyka upp i 'Discover'-delen (och påpeka att de är sorterade "äldst överst" så man får scrolla ner för att se det senaste). Gör användaren uppmärksam på 'fälten' (betona att det är ett betydelsefullt ord på något sätt) i panelen nere till vänster, och tipsa om att titta runt lite.
-
-Sen är det dags att använda logstash för att göra datan mer användbar och skapa nya fält. Det ska vi göra i nästa steg.
+Have a look around the UI, if you want, and when you are ready we will proceed to the next step, where it's time to use Logstash to make our data more useful and create more fields.
