@@ -68,9 +68,9 @@ Vidare vet jag inte om man kallar det control signals
 Sen också, visst för att denna logiskt borde ligga här, men man skulle vilja att användaren startar elk-stack på nytt innan hen läser detta egentligen. Borde vi därför flytta detta längre ner?
 TODO Andreas: läs denna kommentar igen när resten är fixat -->
 
-The output from Logstash is `json` data that we forward to Elasticsearch. With the help of the grok plugin we can modify what (key, value)-pairs are included in our resulting `json` objects.</br>
+The output from Logstash is `json` data that we forward to Elasticsearch. With the help of the grok plugin we can modify what (key, value)-pairs are included in our resulting `json` objects that will be sent to Elasticsearch.</br>
 </br> 
-In each instance of the grok plugin we specify what we want the received "message":s to match with. This is done in an array in which each element is a regex-like string. Within each of these strings we can define patterns that will match the messages and add a key-value pair to our output json, given that the string matches the pattern.</br>
+In each instance of the grok plugin we specify what we want the received "message":s to match with. This is done in an array in which each element is a regex-like string. Within each of these strings we can use patterns that will match the messages and add a key-value pair to our output `json`, given that the string matches the pattern.</br>
 </br>
 For example, the array-element
 <code>Greeted: %{WORD:greeted}</code> will match input that contains exactly <code>Greeted: </code> followed by an arbitrary word (WORD is one of ~120 predefined grok patterns, you can see their definitions [here](https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/ecs-v1/grok-patterns)).</br>
@@ -79,9 +79,9 @@ This will create a pair in our `json` output with the key "greeted" and the valu
 </br>
 There is also syntax that lets us [define our own critera for matching](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html#_custom_patterns), instead of using predefined ones such as "WORD". To do this, we write `(?<field_name>the pattern here)`.</br>
 </br>
-For example, the string <code>Additions: (?<calc_additions>[0-9]+)</code> will match a string containing <code>Additions: </code> followed by an arbitrary sequence of numbers, and will create a pair with the key "calc_additions" and the value of the number sequence. So, a log-message of "Additions: 42" would create the key-value pair `(calc_additions, 42)`.</br>
+For example, the string `Additions: (?<calc_additions>[0-9]+)` will match a string containing <code>Additions: </code> followed by an arbitrary sequence of numbers, and will create a pair with the key "calc_additions" and the value of the number sequence. So, a log-message of "Additions: 42" would create the key-value pair `(calc_additions, 42)`.</br>
 </br>
-You can read more about grok <a href="https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html ">here</a>. To help you debug your grok strings, <a href="https://grokdebug.herokuapp.com/">here</a> is a tool that lets you enter a grok string and some input to see if there is a match.
+You can read more about grok <a href="https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html ">here</a>. To help you debug your grok strings, <a href="https://grokdebug.herokuapp.com/">here</a> is a tool that lets you enter a grok pattern and some input to see if there is a match.
 
 </div>
 
