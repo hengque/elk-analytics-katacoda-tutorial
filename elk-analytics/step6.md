@@ -52,8 +52,7 @@ filter {
     }
   }
 }
-```
-{{copy}}
+```{{copy}}
 
 TODO: Lägg till en details-miljö här där vi skriver om syntaxen lite grann.
 
@@ -66,13 +65,18 @@ TODO: Lägg till en details-miljö här där vi skriver om syntaxen lite grann.
   background-color: aliceblue;
   padding: 1em;">
 <!-- TODO: Inte säker på vad skillnaden är på att ha flera groks och att bara lista flera alternativ inne i en, och inte heller säker på saker som match => "message" :/ 
-Vidare vet jag inte om man kallar det control signals -->
-In each instance of the grok plugin we specify what we want the recieved "message":s to match with. This is done in an array, where each item is a regex-like string. Within one of these strings we can define certain control signal that add a key-value pair to our output json payload if the string matches. For example, the string
-<code>Greeted: %{WORD:greeted}</code> will match input that contains exactly "Greeted: " followed by an arbitrary word (where what constitutes a word is defined in the grok control signal). This will create a pair in our output with the key "greeted" and the value of whatever word was matched (that is, the control signal essentially means ${VALUE:key}).
+Vidare vet jag inte om man kallar det control signals 
 
-Another type of control signal lets us define our own critera for matching, instead of using predefined ones such as "WORD". For example the string <code>Additions: (?<calc_additions>[0-9]+)</code>. Here we have defined that a string containing "Additions: " followed by an arbitrary sequence of numbers will create a pair with the key "calc_additions" and the value of the number sequence.
+Sen också, visst för att denna logiskt borde ligga här, men man skulle vilja att användaren startar elk-stack på nytt innan hen läser detta egentligen. Borde vi därför flytta detta längre ner? -->
 
-You can read more about grok <a href="https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html ">here</a>. To help you debug your grok strings, <a href=https://grokdebug.herokuapp.com/">here</a> is a tool that lets you enter a grok string and some input to see if there is a match.
+The output from logstash is json data that we forward to elasticsearch. With the help of the grok plugin we can modify what key value pairs are included in our resulting json objects.</br>
+</br> 
+In each instance of the grok plugin we specify what we want the recieved "message":s to match with. This is done in an array, where each item is a regex-like string. Within one of these strings we can define certain control signal that add a key-value pair to our output json, given that the string matches the "message". For example, the string
+<code>Greeted: %{WORD:greeted}</code> will match input that contains exactly <code>Greeted: </code> followed by an arbitrary word (where what constitutes a word is defined in the grok control signal). This will create a pair in our output with the key "greeted" and the value of whatever word was matched (that is, the control signal essentially means <code>${VALUE:key}</code>).</br>
+</br>
+Another type of control signal lets us define our own critera for matching, instead of using predefined ones such as "WORD". For example the string <code>Additions: (?<calc_additions>[0-9]+)</code>. Here we have defined that a string containing <code>Additions: </code> followed by an arbitrary sequence of numbers will create a pair with the key "calc_additions" and the value of the number sequence.</br>
+</br>
+You can read more about grok <a href="https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html ">here</a>. To help you debug your grok strings, <a href="https://grokdebug.herokuapp.com/">here</a> is a tool that lets you enter a grok string and some input to see if there is a match.
 
 </div>
 
