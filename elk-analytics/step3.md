@@ -24,7 +24,7 @@ Next, clone the repo, enter the new folder, and invoke `docker-compose` to build
   margin-right: 10px;
   background-color: aliceblue;
   padding: 1em;">
-A <i>container</i> consists of an application and everything that application needs to run, in terms of dependencies, needed system configurations, and so on. Containerization is a useful way of shipping software to make sure they can be run anywhere, assuming software capable of running the containers is available.</br>
+A <i>container</i> consists of an application and everything that application needs to run, in terms of dependencies, needed system configurations, and so on. Containerization is a useful way of shipping software to make sure it can be run anywhere, assuming software capable of running the containers is available.</br>
 </br>
 In this tutorial, we are using <code>docker-compose</code> (pre-installed in our Katacoda environment) to start three containers: one containing Elasticsearch, one containing Logstash, and one containing Kibana. The <code>--no-start</code>-flag passed to <code>docker-compose</code> is used to make it build the containers without starting them (we will want to make some configurations before we start).</br>
 </br>
@@ -45,7 +45,7 @@ For simplicity's sake, we have chosen the third option by using a Github reposit
 
 At this point, it might be good to motivate why we even need log management tools like the ELK stack. The answer is that these tools are highly useful whenever searching and aggregating log data from applications is of interest. This can provide useful insights for managing an application by e.g. showing where crashes are most likely to occur, or showing how users are interacting with your application.
 
-Without log management tools like the ELK stack, the process of writing custom scripts to scan extensive log outputs of large applications can be daunting. This task is further complicated in the setting of distributed applications (i.e. applications running on several computers, connected via a network) where logs end up in different places. This is especially the case for applications that are implemented using the *microsevices architecture*, given their distributed nature (and tendency to have services implemented in many different languages and frameworks).
+Without log management tools like the ELK stack, the process of writing custom scripts to scan extensive log outputs of large applications can be daunting. This task is further complicated in the setting of distributed applications (i.e. applications running on several computers, connected via a network) where logs end up in different places. This is especially the case for applications that are implemented using the *microservices architecture*, given their distributed nature (and tendency to have services implemented in many different languages and frameworks).
 
 ## A closer look at the ELK stack
 

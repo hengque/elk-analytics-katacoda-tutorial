@@ -6,7 +6,7 @@
 
 To make the logs persist in a log file, we need to specify this in the settings of our application. In Java Spring, this is done in the `application.properties` file in the `src/main/resources` folder. As we do not have any settings yet, we will have to create the file as well.
 
-Make sure you are still in the `gs-serving-web-content` folder, and execute:
+Make sure you are still in the `gs-serving-web-content` folder (if you've only executed the commands specified so far, you will be), and execute:
 
 `echo "logging.file.path=/root/logs" > src/main/resources/application.properties`{{execute interrupt}}
 
@@ -35,12 +35,12 @@ This will make sure our logs will end up in a file in the `/root/logs` folder (t
 In this part of the tutorial, you are encouraged to research how to implement "logging to file" in your preferred language/framework, in case you want to use this tutorial with an application not written using Java Spring. Apart from specific grok-patterns for parsing our log-messages (Step 6 will explain what this means), the rest of the tutorial will be useful regardless of how the base application is implemented.
 </div>
 
-As previously stated, this tutorial is not about Java logging. Because of this, we have already added logging statements to the base application you cloned in the last step. If you are interested in how this works, take a look at any of the classes for the endpoints (you can find all endpoints in the `src/main/java/com/example/servingwebcontent` folder).
+As previously stated, this tutorial is not about Java logging. Because of this, we have already added logging statements to the base application you cloned in the last step. If you are interested in how this works, take a look at any of the classes for the endpoints (you can find all endpoints in the `gs-serving-web-content/src/main/java/com/example/servingwebcontent` folder).
 
 Now, with our newly added log-folder, let's again start the base application and make sure everything is working. Still in the `gs-serving-web-content` folder, start the base application:
 
 `./mvnw spring-boot:run`{{execute}}
 
-When it has started, you should be able to see the log messages appear in the `/root/logs/spring.log` file as well. Click the following command *twice* to invoke it in a new terminal `cat /root/logs/spring.log`{{execute T2}} (once to open the new terminal, and again to actually execute it) so that you can make sure the log file is being updated with your log messages.
+When it has started, you should be able to see the log messages appear in the `/root/logs/spring.log` file as well. Click the following command ***twice*** to invoke it in a new terminal `cat /root/logs/spring.log`{{execute T2}} (once to open the new terminal, and again to actually execute it) so that you can make sure the log file is being updated with your log messages.
 
 Now, it is high time to download and start using the ELK stack!

@@ -13,4 +13,18 @@ As the tutorial progresses, we will have more to say about each of these tools.
 
 Indeed, the material in this tutorial will be applicable for whatever language and framework you use, as long as you know how to create log files in your environment of choice.
 
+<details>
+<summary>Click me!</summary>
+
+<div style="display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: aliceblue;
+  padding: 1em;">
+Throughout the tutorial, you will find expandable boxes like this one that contains extra information for the curious reader. They will also often include reference links to sites where you can learn even more about the content presented in this tutorial.
+
+</div>
+
+</details>
+
 With this introduction out of the way, let's get started!
