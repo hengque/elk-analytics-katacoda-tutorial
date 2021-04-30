@@ -8,6 +8,7 @@ We have learned that Logstash is a data-processing pipline that:
 * outputs the result to several different destinations
 
 This three-step process is handled in the `logstash.conf` file in the `docker-elk/logstash/pipeline` folder. Navigate to this file and open it in the editor, or click this link to automatically open it in the editor:
+
 `docker-elk/logstash/pipeline/logstash.conf`{{open}}
 
 Each of the three steps are handled by so-called *plugins*. The first step uses *input plugins*, the second uses *filter plugins*, and the third uses *output plugins*.
@@ -31,7 +32,7 @@ The maintainers of `docker-elk` have already added some configuration for us. Wi
 * *Beats* is another tool from the people behind the ELK stack, and can be thought of as a more light-weight version of Logstash. We will not be using it in this tutorial.
 * Data sent over TCP at port 5000 will be consumed by Logstash. This is useful for manual debugging purposes, and also enables services on other devices to send data over the network.
 
-In the input step, we also want to tell Logstash to pull data from our log file. To do this, we will add the *file plugin*.
+In the input step, we also want to tell Logstash to pull data from our log file. To do this, we will add the *file plugin*. Copy the contents below, and add them under the Beats- and TCP-plugins (i.e. after line 8).
 
 ```
 file {
@@ -40,7 +41,7 @@ file {
 ```{{copy}}
 *(Tip: You can click the box to copy the content!)*
 
-Since our ELK stack is running in containers, we need to map the "outside" of the containers to the "inside". This is done in the configuration file for `docker-compose`, called `docker-compose.yml`.
+Now, since our ELK stack is running in containers, we need to map the "outside" of the containers to the "inside". This is done in the configuration file for `docker-compose`, called `docker-compose.yml`.
 
 Open `docker-elk/docker-compose.yml`{{open}} and add the following under the `volumes` attribute in the `logstash`-part of the file (i.e. after line 42):
 
@@ -50,7 +51,9 @@ Open `docker-elk/docker-compose.yml`{{open}} and add the following under the `vo
     target: /usr/share/logstash/logfile.log
 ```{{copy}}
 
-Now we are finally ready to start the stack. Make sure you are in the `docker-elk` in the terminal, and execute:
+This will map our `spring.log` file to a file called `logfile.log` inside the container (recall this was the path we added in the file-plugin in `logstash.conf`).
+
+Now we are finally ready to start the stack. Make sure you are in the `docker-elk` folder in the terminal, and execute:
 
 `docker-compose up`{{execute}}
 
